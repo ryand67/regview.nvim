@@ -1,3 +1,5 @@
+local utils = require('utils')
+
 local M = {}
 
 M.opts = {
@@ -5,6 +7,8 @@ M.opts = {
 }
 
 local function run_regview()
+    local reg = utils.get_processed_reg()
+    P(reg)
 end
 
 ---sets up regview
