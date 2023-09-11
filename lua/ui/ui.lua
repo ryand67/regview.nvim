@@ -42,14 +42,15 @@ ui.prompt_regs = function(regs)
             return
         end
 
+        local s = utils.make_lines(original_line, structured_regs[cur_pos].content, original_curpos)
 
-        local s = utils.make_lines(original_line, structured_regs[cur_pos].content)
-        P(s)
+        vim.api.nvim_buf_set_lines(original_buf, original_curpos[1] - 1, original_curpos[1], true, { s })
     end, { buffer = buffer })
 end
 
 ui.win_config = function(regs)
     local width = math.floor(vim.api.nvim_win_get_width(0) * .75)
+
     return {
         relative  = "mouse",
         focusable = true,
