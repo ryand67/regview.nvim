@@ -5,13 +5,12 @@ local M = {}
 
 
 M.opts = {
-    cmd_key = "\""
+    cmd_key = 'rv'
 }
 
 ---the main plugin runner
 local function run_regview()
-    -- local regs = parser.get_structured_regs()
-    ui.open_window(parser.get_printable_regs())
+    ui.prompt_regs(parser.get_regs())
 end
 
 ---sets up regview

@@ -1,5 +1,12 @@
 local parser = {}
 
+parser.get_regs = function()
+    return {
+        printable = parser.get_printable_regs(),
+        structured = parser.get_structured_regs()
+    }
+end
+
 ---Retrieves processed register information
 ---@return table reg info, table of tables { type, reg, content } shape
 parser.get_structured_regs = function()
