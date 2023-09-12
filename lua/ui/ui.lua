@@ -4,7 +4,7 @@ local utils = require("utils.utils")
 local ui = {}
 
 ---open ui window
----@param printable_regs table register information
+---@param regs table register information
 ui.prompt_regs = function(regs)
     local printable_regs = regs.printable
     local structured_regs = regs.structured
@@ -58,7 +58,7 @@ ui.win_config = function(regs)
         border    = "rounded",
         width     = width,
         height    = #regs + parser.get_overflow_number(regs, width),
-        title     = "Regview:",
+        title     = "Regview: (<Esc> or q to exit)",
         row       = #regs,
         col       = 10
     }
