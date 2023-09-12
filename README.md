@@ -9,7 +9,7 @@
 <!--toc:end-->
 
 ## About
-A neovim plugin that makes the register process more seamless.
+A Neovim plugin that makes the register process more seamless.
 ![regview screenshot](./screenshots/regview.png)
 
 ## Installation
