@@ -52,7 +52,7 @@ ui.win_config = function(regs)
     local width = math.floor(vim.api.nvim_win_get_width(0) * .75)
 
     return {
-        relative  = "mouse",
+        relative  = "win",
         focusable = true,
         style     = "minimal",
         border    = "rounded",

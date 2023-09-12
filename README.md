@@ -32,3 +32,4 @@ require('regview').setup({
 ## Todo
 * UI launch on cursor maybe
 * Rearrange register content would be cool
+* Highlight register content in window
