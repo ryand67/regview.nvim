@@ -1,10 +1,19 @@
 # regview.nvim
 
+<!--toc:start-->
+- [regview.nvim](#regviewnvim)
+  - [About](#about)
+  - [Usage](#usage)
+  - [Todo](#todo)
+<!--toc:end-->
+
 ## About
 A neovim plugin that makes the register process more seamless.
+![regview screenshot](./screenshots/regview.png)
 
 ## Usage
 Simply call the `setup` function in your neovim config and pass in your desired keyboard command (default is `rv`).
+When you hit the key a window will open with your current register content, navigate to the one you want and hit `<cr>`.
 
 ```lua
 require('regview').setup({
