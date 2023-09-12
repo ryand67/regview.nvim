@@ -5,10 +5,7 @@ local ui = {}
 
 ---open ui window
 ---@param regs table register information
-ui.prompt_regs = function(regs)
-    local printable_regs = regs.printable
-    local structured_regs = regs.structured
-
+ui.prompt_regs = function(printable_regs, structured_regs)
     local original_buf = vim.api.nvim_get_current_buf()
     local original_win = vim.api.nvim_get_current_win()
     local original_curpos = vim.api.nvim_win_get_cursor(original_win)

@@ -1,10 +1,7 @@
 local parser = {}
 
 parser.get_regs = function()
-    return {
-        printable = parser.get_printable_regs(),
-        structured = parser.get_structured_regs()
-    }
+    return parser.get_printable_regs(), parser.get_structured_regs()
 end
 
 ---Retrieves processed register information
