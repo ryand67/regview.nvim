@@ -24,7 +24,7 @@ parser.get_raw_regs = function()
 end
 
 ---returns the amount of lines that go over the allocated buffer width
----@param regs array array of reg strings
+---@param regs table table of reg strings
 ---@param buf_width number buffer width
 ---@return integer number of overflowing lines
 parser.get_overflow_number = function(regs, buf_width)
@@ -70,6 +70,9 @@ parser.split_string = function(str, sep)
     return t
 end
 
+---turns registers into a table of objects with reg information
+---@param reg string register information
+---@return table objects of register information
 parser.process_reg = function(reg)
     local r   = {}
 
